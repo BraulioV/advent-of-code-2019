@@ -1,5 +1,3 @@
-import timeit
-
 class IntCodeMachine():
 
     def __init__(self, program):
@@ -46,10 +44,5 @@ def search_noun_verb_2(data, target):
 
 with open("../data/input") as f:
     data = list(map(lambda x: int(x), f.read().splitlines()[0].split(',')))
-
-def wrapper(func, *args, **kwargs):
-    def wrapped():
-        return func(*args, **kwargs)
-    return wrapped
 
 search_noun_verb_2(data, 19690720)
